@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MenuComponent } from './shared/menu/menu.component';
+
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'verly-front';
-}
+    title='verly-front';
+  }
