@@ -1,0 +1,37 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "cpf": "1554855555",
+      "name": "Matheus",
+      "address": "Estrada do encanamento",
+      "phone": "998406882",
+      "defaulter": false,
+      "createDate": "",
+      "updateDate": "",
+      "customerId": 1
+    },
+    {
+      "id": 2,
+      "cpf": "1554866666",
+      "name": "Brena",
+      "address": "Danon",
+      "phone": "96666666",
+      "defaulter": false,
+      "createDate": "",
+      "updateDate": "",
+      "customerId": 2
+    },
+    {
+      "id": 3,
+      "cpf": "1554866566",
+      "name": "Michel",
+      "address": "Altaneira",
+      "phone": "555555555",
+      "defaulter": false,
+      "createDate": "",
+      "updateDate": "",
+      "customerId": 3
+    }
+  ]
+}

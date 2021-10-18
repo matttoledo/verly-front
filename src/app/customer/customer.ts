@@ -1,8 +1,8 @@
 export interface Customer {
-  id: string;
+  id: number;
   cpf: string;
   name: string;
-  address:string;
+  address: string;
   phone: string;
   defaulter: boolean;
   createDate: Date;
