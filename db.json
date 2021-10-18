@@ -32,6 +32,16 @@
       "createDate": "",
       "updateDate": "",
       "customerId": 3
+    },
+    {
+      "id": 4,
+      "cpf": "140656769",
+      "name": "Lucao",
+      "address": "Penha",
+      "phone": "6666666666",
+      "defaulter": false,
+      "createDate": "",
+      "updateDate": ""
     }
   ]
 }

@@ -6,14 +6,33 @@ import { empty, Observable, Subject } from 'rxjs';
 @Component({
   selector: 'customer-list',
   templateUrl: './customer-list.component.html',
-  styleUrls: ['./customer-list.component.sass'],
+  styles: [`
+      :host ::ng-deep .p-cell-editing
+        padding-top: 0 !important
+        padding-bottom: 0 !important
+
+  `]
 })
+
 export class CustomerListComponent implements OnInit {
   customers$!: Observable<Customer[]>;
+
+  clonedCustomers: { [s: string]: Customer; } = {};
 
   constructor(private customerService: CustomerService) {}
 
   ngOnInit(): void {
     this.customers$ = this.customerService.getCustomers();
   }
+  onRowEditInit(customer: Customer) {
+    this.clonedCustomers[customer.id] = {...customer};
+}
+
+onRowEditSave(customer: Customer) {
+
+}
+
+onRowEditCancel(customer: Customer, id: number) {
+
+}
 }
