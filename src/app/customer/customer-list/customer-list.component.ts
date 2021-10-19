@@ -6,18 +6,19 @@ import { empty, Observable, Subject } from 'rxjs';
 @Component({
   selector: 'customer-list',
   templateUrl: './customer-list.component.html',
-  styles: [`
+  styles: [
+    `
       :host ::ng-deep .p-cell-editing
         padding-top: 0 !important
         padding-bottom: 0 !important
 
-  `]
+  `,
+  ],
 })
-
 export class CustomerListComponent implements OnInit {
   customers$!: Observable<Customer[]>;
 
-  clonedCustomers: { [s: string]: Customer; } = {};
+  clonedCustomers: { [s: string]: Customer } = {};
 
   constructor(private customerService: CustomerService) {}
 
@@ -25,14 +26,12 @@ export class CustomerListComponent implements OnInit {
     this.customers$ = this.customerService.getCustomers();
   }
   onRowEditInit(customer: Customer) {
-    this.clonedCustomers[customer.id] = {...customer};
-}
+    this.clonedCustomers[customer.id] = { ...customer };
+  }
 
-onRowEditSave(customer: Customer) {
+  onRowEditSave(customer: Customer) {
+    this.customerService.updateCustomer(customer);
+  }
 
-}
-
-onRowEditCancel(customer: Customer, id: number) {
-
-}
+  onRowEditCancel(customer: Customer, id: number) {}
 }

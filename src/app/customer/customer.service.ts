@@ -14,4 +14,8 @@ export class CustomerService {
   getCustomers(){
     return this.http.get<Customer[]>(this.API).pipe(delay(1000), tap(console.log))
   }
+
+  updateCustomer(customer: Customer){
+    return this.http.patch(`${this.API}/{customer.id}`, customer).pipe(take(1));
+  }
 }
