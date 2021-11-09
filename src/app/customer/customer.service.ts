@@ -7,7 +7,7 @@ import { delay, take, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class CustomerService {
-  private readonly API = `${environment.API}customers`;
+  private readonly API = `${environment.API}/customer`;
 
   constructor(private http: HttpClient) { }
 
@@ -16,6 +16,10 @@ export class CustomerService {
   }
 
   updateCustomer(customer: Customer){
-    return this.http.patch(`${this.API}/{customer.id}`, customer).pipe(take(1));
+    return this.http.patch(this.API + '/' + customer.id, customer).pipe(take(1));
   }
+  findAdressByCpf(cep:number){
+    return console.log(this.http.get('https://viacep.com.br/ws/'+cep+'/json/'))
+  }
+
 }

@@ -30,7 +30,7 @@ export class CustomerListComponent implements OnInit {
   }
 
   onRowEditSave(customer: Customer) {
-    this.customerService.updateCustomer(customer);
+    this.customerService.updateCustomer(customer).subscribe();
   }
 
   onRowEditCancel(customer: Customer, id: number) {}

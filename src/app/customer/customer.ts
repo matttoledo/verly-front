@@ -7,5 +7,4 @@ export interface Customer {
   defaulter: boolean;
   createDate: Date;
   updateDate: Date;
-  customerId: number;
 }

@@ -17,7 +17,8 @@ export class MenuComponent implements OnInit {
                 items:[
                     {
                         label:'Inserir',
-                        icon:'pi pi-fw pi-plus'
+                        icon:'pi pi-fw pi-plus',
+                        routerLink:['/create']
                     },
                     {
                         label:'Listar',
