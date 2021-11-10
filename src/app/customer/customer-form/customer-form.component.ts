@@ -5,7 +5,7 @@ import { Customer } from '../customer';
 @Component({
   selector: 'customer-form',
   templateUrl: './customer-form.component.html',
-  styleUrls: ['./customer-form.component.sass']
+  styleUrls: ['./customer-form.component.css']
 })
 export class CustomerFormComponent implements OnInit {
 
@@ -13,6 +13,8 @@ export class CustomerFormComponent implements OnInit {
 
 
   constructor(private customerService: CustomerService) { }
+
+  boxes: Array<number> = new Array(24);
 
   ngOnInit(): void {
     console.log(this.customerService.findAdressByCpf(23060000));

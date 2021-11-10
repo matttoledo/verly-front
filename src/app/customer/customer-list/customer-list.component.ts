@@ -6,14 +6,7 @@ import { empty, Observable, Subject } from 'rxjs';
 @Component({
   selector: 'customer-list',
   templateUrl: './customer-list.component.html',
-  styles: [
-    `
-      :host ::ng-deep .p-cell-editing
-        padding-top: 0 !important
-        padding-bottom: 0 !important
-
-  `,
-  ],
+  styleUrls: ['./customer-list.component.css']
 })
 export class CustomerListComponent implements OnInit {
   customers$!: Observable<Customer[]>;
