@@ -18,10 +18,12 @@ export class MenuComponent implements OnInit {
           {
             label: 'Inserir',
             icon: 'pi pi-fw pi-plus',
+            routerLink: ['order/create']
           },
           {
             label: 'Listar',
             icon: 'pi pi-fw pi-list',
+            routerLink: ['order/list']
           },
         ],
       },
@@ -49,16 +51,16 @@ export class MenuComponent implements OnInit {
             label: 'Listar',
             routerLink: ['customer/list'],
           },
-          {
-            label: 'Buscar',
-            icon: 'pi pi-fw pi-users',
-            items: [
-              {
-                label: 'Busca efetiva',
-                icon: 'pi pi-fw pi-filter',
-              },
-            ],
-          },
+          // {
+          //   label: 'Buscar',
+          //   icon: 'pi pi-fw pi-users',
+          //   items: [
+          //     {
+          //       label: 'Busca efetiva',
+          //       icon: 'pi pi-fw pi-filter',
+          //     },
+          //   ],
+          // },
         ],
       },
       {

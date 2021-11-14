@@ -1,3 +1,4 @@
+import { OrderModule } from './order/order.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomerModule } from './customer/customer.module';
 import { MenuModule } from './shared/menu/menu.module';
@@ -15,6 +16,7 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     MenuModule,
     CustomerModule,
+    OrderModule,
     HttpClientModule
   ],
   providers: [],
