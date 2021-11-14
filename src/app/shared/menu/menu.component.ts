@@ -44,6 +44,7 @@ export class MenuComponent implements OnInit {
                     {
                         label:'Adicionar',
                         icon:'pi pi-fw pi-user-plus',
+                        routerLink:['customer/create']
 
                     },
                     {
@@ -56,7 +57,8 @@ export class MenuComponent implements OnInit {
                         },
                         {
                             icon:'pi pi-fw pi-bars',
-                            label:'Listar'
+                            label:'Listar',
+                            routerLink:['customer/list']
                         }
                         ]
                     }

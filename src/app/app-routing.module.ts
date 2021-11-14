@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', pathMatch:'full', redirectTo: 'customers'
+    path: '', pathMatch:'full', redirectTo: 'customer'
   },
   {
-    path:'customers',
+    path:'customer',
     loadChildren: () => import('./customer/customer.module').then(m => m.CustomerModule)
 
   }
