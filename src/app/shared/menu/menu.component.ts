@@ -34,6 +34,7 @@ export class MenuComponent implements OnInit {
           {
             label: 'Fluxo de Caixa',
             icon: 'pi pi-fw pi-dollar',
+            routerLink: ['cash']
           },
         ],
       },
