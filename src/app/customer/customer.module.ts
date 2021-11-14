@@ -8,8 +8,10 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { CustomerFormComponent } from './customer-form/customer-form.component';
 
-const routes: Routes = [{ path: '', component: CustomerListComponent },
-{path:'create', component: CustomerFormComponent}];
+const routes: Routes = [
+  { path: 'customer/list', component: CustomerListComponent },
+  { path: 'customer/create', component: CustomerFormComponent },
+];
 
 @NgModule({
   declarations: [CustomerListComponent, CustomerFormComponent],
@@ -19,7 +21,7 @@ const routes: Routes = [{ path: '', component: CustomerListComponent },
     TableModule,
     FormsModule,
     ButtonModule,
-    InputTextModule
+    InputTextModule,
   ],
   exports: [],
 })
