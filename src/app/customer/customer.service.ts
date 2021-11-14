@@ -12,7 +12,13 @@ export class CustomerService {
   constructor(private http: HttpClient) { }
 
   getCustomers(){
-    return this.http.get<Customer[]>(this.API).pipe(delay(1000), tap(console.log))
+    return this.http.get<Customer[]>(this.API);
+  }
+  createCustomer(customer: Customer){
+    console.log("cheguei")
+    this.http.post<Customer>(this.API, customer).subscribe(dados => console.log(dados));
+    console.log("nao fiz o post")
+    return customer;
   }
 
   updateCustomer(customer: Customer){

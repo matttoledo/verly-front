@@ -3,7 +3,7 @@ import { CustomerListComponent } from './customer-list/customer-list.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TableModule } from 'primeng/table';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { CustomerFormComponent } from './customer-form/customer-form.component';
@@ -22,6 +22,7 @@ const routes: Routes = [
     FormsModule,
     ButtonModule,
     InputTextModule,
+    ReactiveFormsModule
   ],
   exports: [],
 })
