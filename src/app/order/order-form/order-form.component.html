@@ -1,1 +1,96 @@
-<p>order-form works!</p>
+<div class="flex justify-content-center flex-wrap">
+  <div class="absolute shadow-4 mt-6 w-4 flex justify-content-center">
+    <form
+      class="flex flex-column w-6"
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+    >
+      <div class="text-2xl ml-2 my-3">Novo Pedido</div>
+      <input
+        id="name"
+        type="text"
+        id="float-input"
+        type="text"
+        pInputText
+        placeholder="Nome"
+        class="my-3"
+        formControlName="name"
+      />
+
+      <input
+        id="cpf"
+        type="text"
+        id="float-input"
+        type="text"
+        pInputText
+        placeholder="CPF"
+        class="my-3"
+        formControlName="cpf"
+      />
+
+      <input
+        id="phone"
+        type="text"
+        id="float-input"
+        type="text"
+        pInputText
+        placeholder="Celular"
+        class="my-3"
+        formControlName="phone"
+      />
+
+      <input
+        id="phone2"
+        type="text"
+        id="float-input"
+        type="text"
+        pInputText
+        placeholder="Telefone"
+        class="my-3"
+        formControlName="phone2"
+      />
+
+      <input
+        id="cep"
+        type="text"
+        id="float-input"
+        type="text"
+        pInputText
+        placeholder="CEP"
+        class="my-3"
+        formControlName="cep"
+      />
+      <input
+        id="address"
+        type="text"
+        id="float-input"
+        type="text"
+        pInputText
+        placeholder="Endereço"
+        class="my-3"
+        formControlName="address"
+      />
+
+      <input
+        id="complement"
+        type="text"
+        id="float-input"
+        type="text"
+        pInputText
+        placeholder="Complemento"
+        class="my-3"
+        formControlName="complement"
+      />
+      <div class="flex justify-content-evenly flex-wrap">
+        <button pButton pRipple class="my-3 w-2" type="submit">Enviar</button>
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Primary"
+          class="my-3"
+        >Limpar</button>
+      </div>
+    </form>
+  </div>
+</div>

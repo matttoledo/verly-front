@@ -6,7 +6,11 @@ import { TableModule } from 'primeng/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { InputMaskModule } from 'primeng/inputmask';
 import { CustomerFormComponent } from './customer-form/customer-form.component';
+import { DividerModule } from 'primeng/divider';
+import {SplitterModule} from 'primeng/splitter';
+
 
 const routes: Routes = [
   { path: 'customer/list', component: CustomerListComponent },
@@ -22,7 +26,10 @@ const routes: Routes = [
     FormsModule,
     ButtonModule,
     InputTextModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    InputMaskModule,
+    DividerModule,
+    SplitterModule
   ],
   exports: [],
 })
