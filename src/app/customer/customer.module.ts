@@ -9,8 +9,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputMaskModule } from 'primeng/inputmask';
 import { CustomerFormComponent } from './customer-form/customer-form.component';
 import { DividerModule } from 'primeng/divider';
-import {SplitterModule} from 'primeng/splitter';
-
+import { SplitterModule } from 'primeng/splitter';
 
 const routes: Routes = [
   { path: 'customer/list', component: CustomerListComponent },
@@ -29,7 +28,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     InputMaskModule,
     DividerModule,
-    SplitterModule
+    SplitterModule,
   ],
   exports: [],
 })

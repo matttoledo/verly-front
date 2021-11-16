@@ -6,20 +6,25 @@
       pl-auto
       mt-6
       mb-auto
-      w-3
+      w-max
       flex
       justify-content-center
     "
   >
     <form
       autocomplete="disabled"
-      class="flex flex-column w-6"
+      class="flex flex-column w-min mx-4"
       [formGroup]="form"
       (ngSubmit)="onSubmit()"
     >
       <div class="text-2xl ml-2 pb-4 my-3">Cadastro de Cliente</div>
       <span class="p-float-label my-3">
-        <p-inputMask formControlName="name" autocomplete="disabled"></p-inputMask>
+        <input
+          type="text"
+          pInputText
+          autocomplete="disabled"
+          formControlName="name"
+        />
         <label for="float-input">Nome</label>
       </span>
       <span class="p-float-label my-3">
@@ -28,8 +33,6 @@
           mask="999.999.999-99"
           class="my-3"
           formControlName="cpf"
-          characterPattern="[([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})]
-          "
         ></p-inputMask>
         <label for="float-input">CPF</label>
       </span>
@@ -37,7 +40,7 @@
         <p-inputMask
           autocomplete="disabled"
           mask="(99)99999-9999"
-          formControlName="phone"
+          formControlName="phones"
         ></p-inputMask>
         <label for="float-input">Celular</label>
       </span>
@@ -45,38 +48,40 @@
         <p-inputMask
           autocomplete="disabled"
           mask="(99)99999-9999"
-          formControlName="phone"
+          formControlName="phones"
         ></p-inputMask>
         <label for="float input">Telefone</label>
       </div>
-      <p-divider align="center" type="dashed"></p-divider>
       <div class="p-float-label my-3">
         <p-inputMask
           autocomplete="disabled"
           mask="99999-999"
-          formControlName="CEP"
+          formControlName="cep"
+          (focusout)="findAddress()"
         ></p-inputMask>
         <label for="float input">CEP</label>
       </div>
       <div class="p-float-label my-3">
-        <input type="text"
+        <input
+          type="text"
           pInputText
           autocomplete="disabled"
-          formControlName="address"
-        >
-        <label for="float input">Endereço</label>
+          formControlName="street"
+        />
+        <label for="float input">Localidade</label>
       </div>
       <div class="p-float-label my-3">
-        <input type="text"
+        <input
+          type="text"
           pInputText
           autocomplete="disabled"
           formControlName="complement"
-        >
+          />
         <label for="float input">Complemento</label>
       </div>
       <div class="flex flex-row">
         <button class="my-3 w-min mx-2" pButton type="submit">Enviar</button>
-        <button class="my-3 w-min mx-2" pButton type="submit">Limpar</button>
+        <button class="my-3 w-min mx-2" pButton (click)="resetForm()">Limpar</button>
       </div>
     </form>
   </div>
