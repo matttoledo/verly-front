@@ -3,7 +3,8 @@ export interface Customer {
   cpf: string;
   name: string;
   address: string;
-  phones: string[];
+  firstPhone: string;
+  secondPhone: string;
   cep: string;
   street: string;
   number: string;

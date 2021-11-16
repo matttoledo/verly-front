@@ -11,6 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class CustomerFormComponent implements OnInit {
   customer!: Customer;
   form!: FormGroup;
+  phones!:string[];
 
   constructor(
     private customerService: CustomerService,
@@ -23,7 +24,8 @@ export class CustomerFormComponent implements OnInit {
       cpf: [null],
       cep: [null],
       address: [null],
-      phones: [null],
+      firstPhone: [null],
+      secondPhone:[null],
       street:[null],
       number:[null],
       district:[null],

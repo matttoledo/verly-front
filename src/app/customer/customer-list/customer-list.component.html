@@ -11,8 +11,8 @@
         <tr>
           <th>Nome</th>
           <th>Endereço</th>
+          <th>Celular</th>
           <th>Telefone</th>
-          <th>CPF</th>
           <th></th>
         </tr>
       </ng-template>
@@ -39,7 +39,7 @@
                 <input pInputText type="text" [(ngModel)]="customer.address" />
               </ng-template>
               <ng-template pTemplate="output">
-                {{ customer.address }}
+                {{ customer.street +", " +customer.complement + " - " + customer.district}}
               </ng-template>
             </p-cellEditor>
           </td>
@@ -49,7 +49,7 @@
                 <input pInputText type="text" [(ngModel)]="customer.phone" />
               </ng-template>
               <ng-template pTemplate="output">
-                {{ customer.phone }}
+                {{ customer.firstPhone }}
               </ng-template>
             </p-cellEditor>
           </td>
@@ -59,7 +59,7 @@
                 <input pInputText type="text" [(ngModel)]="customer.cpf" />
               </ng-template>
               <ng-template pTemplate="output">
-                {{ customer.cpf }}
+                {{ customer.secondPhone }}
               </ng-template>
             </p-cellEditor>
           </td>
