@@ -30,16 +30,9 @@ export class CustomerService {
       .pipe(take(1));
   }
   findAdressByCep(cep: String) {
-    let customer: Customer;
-    if (cep == null) alert('cep vazio');
-    let subscribe = this.http
+    return this.http
       .get<Address>(
         'https://viacep.com.br/ws/' + cep.replace('-', '') + '/json/'
       )
-      .subscribe(
-        (dados) => console.log(dados),
-        (error: any) => alert('erro')
-      );
-
   }
 }

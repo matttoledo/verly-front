@@ -79,6 +79,24 @@
           />
         <label for="float input">Complemento</label>
       </div>
+      <div class="p-float-label my-3">
+        <input
+          type="text"
+          pInputText
+          autocomplete="disabled"
+          formControlName="district"
+          />
+        <label for="float input">Bairro</label>
+      </div>
+      <div class="p-float-label my-3">
+        <input
+          type="text"
+          pInputText
+          autocomplete="disabled"
+          formControlName="city"
+          />
+        <label for="float input">Cidade</label>
+      </div>
       <div class="flex flex-row">
         <button class="my-3 w-min mx-2" pButton type="submit">Enviar</button>
         <button class="my-3 w-min mx-2" pButton (click)="resetForm()">Limpar</button>

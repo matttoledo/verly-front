@@ -41,7 +41,16 @@ export class CustomerFormComponent implements OnInit {
   }
 
   findAddress(){
-    let address = this.customerService.findAdressByCep(this.form.value.cep);
+    this.customerService.findAdressByCep(this.form.value.cep).subscribe(
+      (dados) => {
+        this.form.controls['street'].setValue(dados.logradouro)
+        this.form.controls['district'].setValue(dados.bairro)
+        this.form.controls['city'].setValue(dados.localidade)
+      },
+      (error: any) => alert('erro')
+    );
+    console.log(this.form.value)
+
   }
 
   resetForm(){
