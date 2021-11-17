@@ -1,6 +1,7 @@
 export interface Order {
   id: number;
-  products: string;
+  customerId: number;
+  products: string[];
   createDate: Date;
   updateDate: Date;
   deliveryDate: Date;

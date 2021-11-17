@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API: 'https://265a-131-161-179-47.ngrok.io/verly-service'
+  API: 'http://localhost:9000/verly-service'
 };
 
 /*
