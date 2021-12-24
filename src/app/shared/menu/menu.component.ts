@@ -28,6 +28,22 @@ export class MenuComponent implements OnInit {
         ],
       },
       {
+        label: 'Produtos',
+        icon: 'pi pi-fw pi-clone',
+        items: [
+          {
+            label: 'Inserir',
+            icon: 'pi pi-fw pi-plus',
+            routerLink: ['product/create']
+          },
+          {
+            label: 'Listar',
+            icon: 'pi pi-fw pi-list',
+            routerLink: ['product/list']
+          },
+        ],
+      },
+      {
         label: 'Caixa',
         icon: 'pi pi-fw pi-wallet',
         items: [

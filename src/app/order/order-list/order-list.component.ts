@@ -18,7 +18,6 @@ export class OrderListComponent implements OnInit {
 
   ngOnInit(): void {
     this.orders$ = this.orderService.getOrders();
-    console.log(this.orderService.getOrders());
   }
   onRowEditInit(order: Order) {
     this.clonedOrders[order.id] = { ...order };

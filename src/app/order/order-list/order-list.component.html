@@ -11,14 +11,14 @@
         <tr>
           <th>Cliente</th>
           <th>Produtos</th>
-          <th>Valor</th>
           <th>Custo</th>
-          <th>Lucro</th>
+          <th>Preço</th>
+          <th>Pago</th>
           <th>Débito</th>
+          <th>Lucro</th>
           <th>Data do Pedido</th>
           <th>Data da Entrega</th>
           <th>Status</th>
-
           <th></th>
         </tr>
       </ng-template>
@@ -52,16 +52,6 @@
           <td>
             <p-cellEditor>
               <ng-template pTemplate="input">
-                <input pInputText type="text" [(ngModel)]="order.amount" />
-              </ng-template>
-              <ng-template pTemplate="output">
-                {{ order.amount }}
-              </ng-template>
-            </p-cellEditor>
-          </td>
-          <td>
-            <p-cellEditor>
-              <ng-template pTemplate="input">
                 <input pInputText type="text" [(ngModel)]="order.cost" />
               </ng-template>
               <ng-template pTemplate="output">
@@ -72,10 +62,20 @@
           <td>
             <p-cellEditor>
               <ng-template pTemplate="input">
-                <input pInputText type="text" [(ngModel)]="order.profit" />
+                <input pInputText type="text" [(ngModel)]="order.price" />
               </ng-template>
               <ng-template pTemplate="output">
-                {{ order.profit }}
+                {{ order.price }}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input pInputText type="text" [(ngModel)]="order.paid" />
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{ order.paid }}
               </ng-template>
             </p-cellEditor>
           </td>
@@ -86,6 +86,16 @@
               </ng-template>
               <ng-template pTemplate="output">
                 {{ order.debt }}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input pInputText type="text" [(ngModel)]="order.profit" />
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{ order.profit }}
               </ng-template>
             </p-cellEditor>
           </td>
