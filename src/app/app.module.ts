@@ -1,3 +1,4 @@
+import { ProductModule } from './product/product.module';
 import { CashModule } from './cash/cash.module';
 import { OrderModule } from './order/order.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -19,6 +20,7 @@ import { AppComponent } from './app.component';
     CustomerModule,
     OrderModule,
     CashModule,
+    ProductModule,
     HttpClientModule
   ],
   providers: [],
