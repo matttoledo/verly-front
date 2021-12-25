@@ -7,7 +7,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { RouterModule, Routes } from '@angular/router';
 import { TableModule } from 'primeng/table';
 
-const routes: Routes = [{ path: 'cash', component: CashFlowComponent }];
+const routes: Routes = [{ path: 'cash/cash-flow', component: CashFlowComponent }];
 
 @NgModule({
   declarations: [CashFlowComponent],
