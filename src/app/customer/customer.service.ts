@@ -14,6 +14,7 @@ export class CustomerService {
   constructor(private http: HttpClient) {}
 
   getCustomers() {
+    console.log(this.http.get<Customer[]>(this.API));
     return this.http.get<Customer[]>(this.API);
   }
   createCustomer(customer: Customer) {

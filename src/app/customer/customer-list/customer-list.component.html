@@ -39,17 +39,17 @@
                 <input pInputText type="text" [(ngModel)]="customer.address" />
               </ng-template>
               <ng-template pTemplate="output">
-                {{ customer.street +", " +customer.complement + " - " + customer.district}}
+                {{ customer.address }}
               </ng-template>
             </p-cellEditor>
           </td>
           <td>
             <p-cellEditor>
               <ng-template pTemplate="input">
-                <input pInputText type="text" [(ngModel)]="customer.phone" />
+                <input pInputText type="text" [(ngModel)]="customer.phones" />
               </ng-template>
               <ng-template pTemplate="output">
-                {{ customer.firstPhone }}
+                {{ customer.phones }}
               </ng-template>
             </p-cellEditor>
           </td>

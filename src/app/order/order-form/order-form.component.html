@@ -8,37 +8,59 @@
         (ngSubmit)="onSubmit()"
       >
         <div class="inline-block">
-          <p class="text-1xl px-2 py-2 mb-4 shadow-2 flex align-items-center justify-content-center">Novo Pedido</p>
+          <p
+            class="
+              text-1xl
+              px-2
+              py-2
+              mb-4
+              shadow-2
+              flex
+              align-items-center
+              justify-content-center
+            "
+          >
+            Novo Pedido
+          </p>
 
           <div class="p-float-label my-4">
-            <input
-              type="text"
-              pInputText
-              autocomplete="disabled"
-            />
-            <label for="float input">Cliente</label>
+            <p-dropdown
+              [options]="customers"
+              *ngIf="customers$ | async as customers"
+              optionLabel="name"
+              [filter]="true"
+              filterBy="name"
+              [showClear]="true"
+              placeholder="Selecione um Cliente"
+            >
+            <p-dropdown ([options])="customers" optionLabel="name"></p-dropdown>
+
+              <ng-template pTemplate="selectedItem">
+                <div
+                  class="country-item country-item-value"
+                  *ngIf="selectedCustomer"
+                >
+                  <div>{{ selectedCustomer }}</div>
+                </div>
+              </ng-template>
+              <ng-template let-country pTemplate="item">
+                <div class="country-item">
+                  <div>{{ country.name }}</div>
+                </div>
+              </ng-template>
+            </p-dropdown>
           </div>
           <div class="p-float-label my-4">
-            <input
-              type="text"
-              pInputText
-              autocomplete="disabled"
-            />
+            <input type="text" pInputText autocomplete="disabled" />
             <label for="float input">Produtos</label>
           </div>
           <div class="p-float-label my-4">
-            <input
-              type="text"
-              pInputText
-              autocomplete="disabled"
-            />
+            <input type="text" pInputText autocomplete="disabled" />
             <label for="float input">Status</label>
           </div>
         </div>
         <div class="inline-block ml-8 mt-3">
-          <div class="p-float-label my-4">
-
-          </div>
+          <div class="p-float-label my-4"></div>
           <div class="p-float-label my-4">
             <input
               type="number"
@@ -58,27 +80,17 @@
             <label for="float input">Preço</label>
           </div>
           <div class="p-float-label my-4">
-            <input
-              type="text"
-              pInputText
-              autocomplete="disabled"
-            />
+            <input type="text" pInputText autocomplete="disabled" />
             <label for="float input">Pago</label>
           </div>
           <div class="p-float-label my-4">
-            <input
-              type="number"
-              pInputText
-              autocomplete="disabled"
-            />
+            <input type="number" pInputText autocomplete="disabled" />
             <label for="float input">Débito</label>
           </div>
         </div>
         <div class="flex flex-row justify-content-center">
           <button class="my-3 w-min mx-2" pButton type="submit">Enviar</button>
-          <button class="my-3 w-min mx-2" pButton>
-            Limpar
-          </button>
+          <button class="my-3 w-min mx-2" pButton>Limpar</button>
         </div>
       </form>
     </div>

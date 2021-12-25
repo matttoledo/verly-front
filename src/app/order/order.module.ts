@@ -8,6 +8,7 @@ import { ButtonModule } from 'primeng/button';
 import { RouterModule, Routes } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
+import { DropdownModule } from 'primeng/dropdown';
 
 const routes: Routes = [
   { path: 'order/list', component: OrderListComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
     TableModule,
     FormsModule,
     ButtonModule,
+    DropdownModule,
     InputTextModule,
     ReactiveFormsModule,
   ],
