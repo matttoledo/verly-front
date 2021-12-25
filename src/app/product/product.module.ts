@@ -7,11 +7,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { OrderListComponent } from '../order/order-list/order-list.component';
 import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
+import { ProductFormComponent } from './product-form/product-form.component';
 
-const routes: Routes = [{ path: 'product/list', component: ProductListComponent }];
+const routes: Routes = [
+  { path: 'product/list', component: ProductListComponent },
+  { path: 'product/create', component: ProductFormComponent },
+];
 
 @NgModule({
-  declarations: [ProductListComponent],
+  declarations: [ProductListComponent, ProductFormComponent],
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
