@@ -33,7 +33,10 @@
               [showClear]="true"
               placeholder="Selecione um Cliente"
             >
-            <p-dropdown ([options])="customers" optionLabel="name"></p-dropdown>
+              <p-dropdown
+                ([options])="(customers)"
+                optionLabel="name"
+              ></p-dropdown>
 
               <ng-template pTemplate="selectedItem">
                 <div
@@ -62,29 +65,51 @@
         <div class="inline-block ml-8 mt-3">
           <div class="p-float-label my-4"></div>
           <div class="p-float-label my-4">
-            <input
-              type="number"
-              step="0.01"
-              pInputText
-              autocomplete="disabled"
-            />
+            <p-inputNumber
+            formControlName="cost"
+            inputId="currency-ptbr"
+            mode="currency"
+            currency="BRL"
+            locale="pt-BR"
+            autocomplete="off"
+          >
+          </p-inputNumber>
             <label for="float input">Custo</label>
           </div>
           <div class="p-float-label my-4">
-            <input
-              type="number"
-              step="0.01"
-              pInputText
-              autocomplete="disabled"
-            />
+            <p-inputNumber
+            formControlName="price"
+            inputId="currency-ptbr"
+            mode="currency"
+            currency="BRL"
+            locale="pt-BR"
+            autocomplete="off"
+          >
+          </p-inputNumber>
             <label for="float input">Preço</label>
           </div>
           <div class="p-float-label my-4">
-            <input type="text" pInputText autocomplete="disabled" />
+            <p-inputNumber
+              formControlName="paid"
+              inputId="currency-ptbr"
+              mode="currency"
+              currency="BRL"
+              locale="pt-BR"
+              autocomplete="off"
+              >
+            </p-inputNumber>
             <label for="float input">Pago</label>
           </div>
           <div class="p-float-label my-4">
-            <input type="number" pInputText autocomplete="disabled" />
+            <p-inputNumber
+              formControlName="debt"
+              inputId="currency-ptbr"
+              mode="currency"
+              currency="BRL"
+              locale="pt-BR"
+              autocomplete="off"
+              >
+            </p-inputNumber>
             <label for="float input">Débito</label>
           </div>
         </div>
