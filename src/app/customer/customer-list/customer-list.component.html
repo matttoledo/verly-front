@@ -10,7 +10,9 @@
       <ng-template pTemplate="header">
         <tr>
           <th>Nome</th>
-          <th>Endereço</th>
+          <th>Rua</th>
+          <th>Complemento</th>
+          <th>Bairro</th>
           <th>Celular</th>
           <th>Telefone</th>
           <th></th>
@@ -36,30 +38,50 @@
           <td>
             <p-cellEditor>
               <ng-template pTemplate="input">
-                <input pInputText type="text" [(ngModel)]="customer.address" />
+                <input pInputText type="text" [(ngModel)]="customer.address.logradouro" />
               </ng-template>
               <ng-template pTemplate="output">
-                {{ customer.address }}
+                {{customer.address.logradouro}}
               </ng-template>
             </p-cellEditor>
           </td>
           <td>
             <p-cellEditor>
               <ng-template pTemplate="input">
-                <input pInputText type="text" [(ngModel)]="customer.phones" />
+                <input pInputText type="text" [(ngModel)]="customer.address.complemento" />
               </ng-template>
               <ng-template pTemplate="output">
-                {{ customer.phones }}
+                {{customer.address.complemento}}
               </ng-template>
             </p-cellEditor>
           </td>
           <td>
             <p-cellEditor>
               <ng-template pTemplate="input">
-                <input pInputText type="text" [(ngModel)]="customer.cpf" />
+                <input pInputText type="text" [(ngModel)]="customer.address.bairro" />
               </ng-template>
               <ng-template pTemplate="output">
-                {{ customer.secondPhone }}
+                {{customer.address.bairro}}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input pInputText type="text" [(ngModel)]="customer.phones.one" />
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{ customer.phones.one }}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input pInputText type="text" [(ngModel)]="customer.phones.two" />
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{ customer.phones.two }}
               </ng-template>
             </p-cellEditor>
           </td>

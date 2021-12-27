@@ -3,8 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from './../../environments/environment';
 import { Customer } from './customer';
-import { delay, take, tap } from 'rxjs/operators';
-import { TreeDragDropService } from 'primeng/api';
+import { take } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
 })
@@ -14,7 +13,6 @@ export class CustomerService {
   constructor(private http: HttpClient) {}
 
   getCustomers() {
-    console.log(this.http.get<Customer[]>(this.API));
     return this.http.get<Customer[]>(this.API);
   }
   createCustomer(customer: Customer) {
