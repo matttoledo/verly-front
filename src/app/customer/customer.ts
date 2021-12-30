@@ -1,9 +1,11 @@
+import { Phones } from './phones';
+import { Address } from './address';
 export interface Customer {
   id: number;
   cpf: string;
   name: string;
-  address: string;
-  phones: string;
+  address: Address;
+  phones: Phones;
   firstPhone: string;
   secondPhone: string;
   cep: string;

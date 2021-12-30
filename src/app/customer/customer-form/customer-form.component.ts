@@ -26,12 +26,11 @@ export class CustomerFormComponent implements OnInit {
       address: [null],
       firstPhone: [null],
       secondPhone:[null],
-      street:[null],
-      number:[null],
-      district:[null],
-      city:[null],
-      state:[null],
-      complement:[null]
+      logradouro:[null],
+      bairro:[null],
+      cidade:[null],
+      uf:[null],
+      complemento:[null]
     });
   }
 
@@ -45,13 +44,13 @@ export class CustomerFormComponent implements OnInit {
   findAddress(){
     this.customerService.findAdressByCep(this.form.value.cep).subscribe(
       (dados) => {
-        this.form.controls['street'].setValue(dados.logradouro)
-        this.form.controls['district'].setValue(dados.bairro)
-        this.form.controls['city'].setValue(dados.localidade)
+        this.form.controls['logradouro'].setValue(dados.logradouro)
+        this.form.controls['bairro'].setValue(dados.bairro)
+        this.form.controls['cidade'].setValue(dados.localidade)
       },
       (error: any) => alert('erro')
     );
-    console.log(this.form.value)
+    console.log("Consulta de cep finalizada!");
 
   }
 

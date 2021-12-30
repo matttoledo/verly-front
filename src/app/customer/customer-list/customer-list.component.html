@@ -7,6 +7,7 @@
       editMode="row"
       responsiveLayout="scroll"
     >
+      <ng-template pTemplate="caption"> Clientes </ng-template>
       <ng-template pTemplate="header">
         <tr>
           <th>Nome</th>
@@ -38,37 +39,53 @@
           <td>
             <p-cellEditor>
               <ng-template pTemplate="input">
-                <input pInputText type="text" [(ngModel)]="customer.address.logradouro" />
+                <input
+                  pInputText
+                  type="text"
+                  [(ngModel)]="customer.address.logradouro"
+                />
               </ng-template>
               <ng-template pTemplate="output">
-                {{customer.address.logradouro}}
+                {{ customer.address.logradouro }}
               </ng-template>
             </p-cellEditor>
           </td>
           <td>
             <p-cellEditor>
               <ng-template pTemplate="input">
-                <input pInputText type="text" [(ngModel)]="customer.address.complemento" />
+                <input
+                  pInputText
+                  type="text"
+                  [(ngModel)]="customer.address.complemento"
+                />
               </ng-template>
               <ng-template pTemplate="output">
-                {{customer.address.complemento}}
+                {{ customer.address.complemento }}
               </ng-template>
             </p-cellEditor>
           </td>
           <td>
             <p-cellEditor>
               <ng-template pTemplate="input">
-                <input pInputText type="text" [(ngModel)]="customer.address.bairro" />
+                <input
+                  pInputText
+                  type="text"
+                  [(ngModel)]="customer.address.bairro"
+                />
               </ng-template>
               <ng-template pTemplate="output">
-                {{customer.address.bairro}}
+                {{ customer.address.bairro }}
               </ng-template>
             </p-cellEditor>
           </td>
           <td>
             <p-cellEditor>
               <ng-template pTemplate="input">
-                <input pInputText type="text" [(ngModel)]="customer.phones.one" />
+                <input
+                  pInputText
+                  type="text"
+                  [(ngModel)]="customer.phones.one"
+                />
               </ng-template>
               <ng-template pTemplate="output">
                 {{ customer.phones.one }}
@@ -78,7 +95,11 @@
           <td>
             <p-cellEditor>
               <ng-template pTemplate="input">
-                <input pInputText type="text" [(ngModel)]="customer.phones.two" />
+                <input
+                  pInputText
+                  type="text"
+                  [(ngModel)]="customer.phones.two"
+                />
               </ng-template>
               <ng-template pTemplate="output">
                 {{ customer.phones.two }}
