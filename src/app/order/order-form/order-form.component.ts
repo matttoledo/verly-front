@@ -1,12 +1,9 @@
-import { OrderStatus } from './../orderStatus';
 import { CustomerService } from './../../customer/customer.service';
 import { OrderService } from './../order.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Customer } from 'src/app/customer/customer';
 import { Observable } from 'rxjs';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-import { SelectItemGroup } from 'primeng/api';
 @Component({
   selector: 'order-form',
   templateUrl: './order-form.component.html',

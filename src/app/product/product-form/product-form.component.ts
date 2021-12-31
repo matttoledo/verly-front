@@ -7,21 +7,29 @@ import { Product } from '../product';
 @Component({
   selector: 'product-form',
   templateUrl: './product-form.component.html',
-  styleUrls: ['./product-form.component.css']
+  styleUrls: ['./product-form.component.css'],
 })
 export class ProductFormComponent implements OnInit {
-
   form!: FormGroup;
 
-  products$!: Observable<Product[]>
+  products$!: Observable<Product[]>;
+
+  category!: any;
 
   constructor(
     private formBuilder: FormBuilder,
     private productService: ProductService
-  ) { }
+  ) {
+    this.category = [
+      {
+        name: 'VIDRO-TEMPERADO',
+      },
+      { name: 'PVC' },
+      { name: 'ALUMINIO' },
+    ];
+  }
 
   ngOnInit(): void {
-
     this.form = this.formBuilder.group({
       category: [null],
       type: [null],
@@ -31,19 +39,14 @@ export class ProductFormComponent implements OnInit {
       color: [null],
       cost: [null],
       price: [null],
-      profit: [null]
-
-
-    })
-
-
+      profit: [null],
+    });
   }
-  onSubmit(){
-    console.log("onSubmit");
+  onSubmit() {
+    console.log('onSubmit');
   }
 
-  resetForm(){
+  resetForm() {
     this.form.reset();
   }
-
 }

@@ -30,7 +30,7 @@
               optionLabel="name"
               [filter]="true"
               filterBy="name"
-              [showClear]="true"
+              [showClear]=true
               placeholder="Selecione um Cliente"
             >
               <p-dropdown
@@ -61,8 +61,9 @@
               formControlName="status"
               [options]="orderStatus"
               optionLabel="name"
+              [showClear]=true
+              placeholder="Status"
             ></p-dropdown>
-            <label for="float input">Status</label>
           </div>
         </div>
         <div class="inline-block ml-8 mt-3">

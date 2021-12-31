@@ -10,85 +10,43 @@
         <div class="inline-block">
           <p class="text-1xl px-2 py-2 mb-4 shadow-2 flex align-items-center justify-content-center">Cadastro de Produto</p>
           <span class="p-float-label my-3">
-            <input
-              type="text"
-              pInputText
-              autocomplete="disabled"
-              formControlName="name"
-            />
-            <label for="float-input">Nome</label>
+            <div class="p-float-label my-4">
+              <p-dropdown
+                formControlName="category"
+                [options]="category"
+                optionLabel="name"
+                [showClear]=true
+                placeholder="Categoria"
+              ></p-dropdown>
+            </div>
           </span>
           <span class="p-float-label my-4">
-            <p-inputMask
-              autocomplete="disabled"
-              mask="999.999.999-99"
-              class="my-3"
-              formControlName="cpf"
-            ></p-inputMask>
-            <label for="float-input">CPF</label>
+
           </span>
           <span class="p-float-label my-4">
-            <p-inputMask
-              autocomplete="disabled"
-              mask="(99)99999-9999"
-              formControlName="firstPhone"
-            ></p-inputMask>
-            <label for="float-input">Celular</label>
+
           </span>
           <div class="p-float-label my-4">
-            <p-inputMask
-              autocomplete="disabled"
-              mask="(99)99999-9999"
-              minlength=""
-              formControlName="secondPhone"
-            ></p-inputMask>
-            <label for="float input">Telefone</label>
+
           </div>
         </div>
         <div class="inline-block ml-8 mt-3">
           <div class="p-float-label my-4">
-            <p-inputMask
-              autocomplete="disabled"
-              mask="99999-999"
-              formControlName="cep"
-            ></p-inputMask>
-            <label for="float input">CEP</label>
+
+
+
           </div>
           <div class="p-float-label my-4">
-            <input
-              type="text"
-              pInputText
-              autocomplete="disabled"
-              formControlName="street"
-            />
-            <label for="float input">Localidade</label>
+
           </div>
           <div class="p-float-label my-4">
-            <input
-              type="text"
-              pInputText
-              autocomplete="disabled"
-              formControlName="complement"
-            />
-            <label for="float input">Complemento</label>
+
           </div>
           <div class="p-float-label my-4">
-            <input
-              type="text"
-              pInputText
-              autocomplete="disabled"
-              formControlName="district"
-            />
-            <label for="float input">Bairro</label>
+
           </div>
           <div class="p-float-label my-4">
-            <input
-              type="text"
-              pInputText
-              autocomplete="disabled"
-              formControlName="city"
-            />
-            <label for="float input">Cidade</label>
+
           </div>
         </div>
         <div class="flex flex-row justify-content-center">
