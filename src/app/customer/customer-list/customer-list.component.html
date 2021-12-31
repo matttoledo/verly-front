@@ -81,11 +81,12 @@
           <td>
             <p-cellEditor>
               <ng-template pTemplate="input">
-                <input
+                <p-inputMask
+                  mask="(99) 99999-9999"
                   pInputText
                   type="text"
                   [(ngModel)]="customer.phones.one"
-                />
+              ></p-inputMask>
               </ng-template>
               <ng-template pTemplate="output">
                 {{ customer.phones.one }}
@@ -95,11 +96,12 @@
           <td>
             <p-cellEditor>
               <ng-template pTemplate="input">
-                <input
+                <p-inputMask
+                  mask="(99) 99999-9999"
                   pInputText
                   type="text"
                   [(ngModel)]="customer.phones.two"
-                />
+                ></p-inputMask>
               </ng-template>
               <ng-template pTemplate="output">
                 {{ customer.phones.two }}

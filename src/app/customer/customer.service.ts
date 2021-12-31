@@ -18,7 +18,7 @@ export class CustomerService {
   createCustomer(customer: Customer) {
     let response = this.http.post<Customer>(this.API, customer).subscribe(
       (dados) => console.log(dados),
-      (error: any) => alert('erro')
+      (error: any) => alert('Erro! Verifique o cep digitado!')
     );
     return response;
   }
