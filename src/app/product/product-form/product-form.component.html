@@ -21,25 +21,56 @@
             </div>
           </span>
           <span class="p-float-label my-4">
+            <p-dropdown
+                formControlName="type"
+                [options]="type"
+                optionLabel="name"
+                [showClear]=true
+                placeholder="Tipo"
+              ></p-dropdown>
 
           </span>
           <span class="p-float-label my-4">
-
+            <p-dropdown
+                formControlName="sheets"
+                [options]="sheets"
+                optionLabel="name"
+                [showClear]=true
+                placeholder="Folhas"
+              ></p-dropdown>
           </span>
           <div class="p-float-label my-4">
-
+            <p-inputNumber placeholder="Altura" formControlName="height" suffix=" cm"></p-inputNumber>
           </div>
+
         </div>
         <div class="inline-block ml-8 mt-3">
           <div class="p-float-label my-4">
-
-
-
+            <p-inputNumber placeholder="Largura" formControlName="width" suffix=" cm"></p-inputNumber>
           </div>
           <div class="p-float-label my-4">
-
+            <p-inputNumber
+              formControlName="cost"
+              inputId="currency-ptbr"
+              mode="currency"
+              currency="BRL"
+              locale="pt-BR"
+              autocomplete="off"
+              placeholder="Custo"
+            >
+          </p-inputNumber>
           </div>
           <div class="p-float-label my-4">
+            <p-inputNumber
+              formControlName="profit"
+              inputId="currency-ptbr"
+              mode="currency"
+              currency="BRL"
+              locale="pt-BR"
+              autocomplete="off"
+              placeholder="Lucro"
+            >
+          </p-inputNumber>
 
           </div>
           <div class="p-float-label my-4">

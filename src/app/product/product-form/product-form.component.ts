@@ -16,6 +16,14 @@ export class ProductFormComponent implements OnInit {
 
   category!: any;
 
+  type!: any;
+
+  sheets!:any;
+
+  width!: number;
+
+  height!:number;
+
   constructor(
     private formBuilder: FormBuilder,
     private productService: ProductService
@@ -27,13 +35,24 @@ export class ProductFormComponent implements OnInit {
       { name: 'PVC' },
       { name: 'ALUMINIO' },
     ];
+
+    this.type = [
+      { name: 'PORTA' },
+      { name: 'JANELA' },
+      { name: 'BOX' },
+      { name: 'BASCULA' },
+    ];
+
+    this.sheets = [{name:'2F'},{name:'4F'}]
   }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       category: [null],
       type: [null],
+      sheets: [null],
       width: [null],
+      height: [null],
       weight: [null],
       measure: [null],
       color: [null],
