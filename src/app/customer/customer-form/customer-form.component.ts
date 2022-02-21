@@ -50,21 +50,14 @@ export class CustomerFormComponent implements OnInit {
   }
 
   onSubmit() {
-    // this.customer = this.form.value;
-    // debugger
-    // this.customer.address.localidade = this.form.value.logradouro;
-    // debugger
-    // this.customer.address.cidade = this.form.value.cidade;
-    // this.customer.address.complemento = this.form.value.complemento;
-    // this.customer.phones.one = this.form.value.firstPhone;
-    // debugger
-    // this.customer.phones.two = this.form.value.secondPhone;
+    this.populateAndCreateCustomer();
+  }
 
-    debugger
+  populateAndCreateCustomer(){
     this.customer.name = this.form.value.name;
     this.customer.cpf = this.form.value.cpf;
 
-    this.address.cep = this.form.value.cep;
+    this.address.cep = this.form.value.cep.replace('-', '');
     this.address.bairro = this.form.value.bairro;
     this.address.localidade = this.form.value.logradouro;
     this.address.cidade = this.form.value.cidade;
@@ -72,15 +65,14 @@ export class CustomerFormComponent implements OnInit {
 
     this.customer.address = this.address;
 
-    this.phone.one = this.form.value.firstPhone;
-    this.phone.two = this.form.value.secondPhone;
+    this.phone.one = this.form.value.firstPhone.replace('(', '').replace(')','').replace('-', '');
+    this.phone.two = this.form.value.secondPhone.replace('(', '').replace(')','').replace('-', '');
 
     this.customer.phone = this.phone;
-    debugger
-
-    console.log(this.customer);
     this.customerService.createCustomer(this.customer);
     this.form.reset();
+    alert('Cliente Criado com sucesso!')
+
   }
 
   findAddress() {
