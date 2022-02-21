@@ -24,6 +24,7 @@
               mask="999.999.999-99"
               class="my-3"
               formControlName="cpf"
+              characterPattern="/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/"
             ></p-inputMask>
             <label for="float-input">CPF</label>
           </span>
@@ -38,7 +39,7 @@
           <div class="p-float-label my-4">
             <p-inputMask
               autocomplete="disabled"
-              mask="(99)99999-9999"
+              mask="(99)99999-999?9"
               minlength=""
               formControlName="secondPhone"
             ></p-inputMask>
@@ -50,6 +51,7 @@
             <p-inputMask
               autocomplete="disabled"
               mask="99999-999"
+              minlen
               formControlName="cep"
               (focusout)="findAddress()"
             ></p-inputMask>

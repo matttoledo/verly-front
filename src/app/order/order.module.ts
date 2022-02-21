@@ -10,6 +10,8 @@ import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { MultiSelectModule } from 'primeng/multiselect';
+
 
 const routes: Routes = [
   { path: 'order/list', component: OrderListComponent },
@@ -27,7 +29,8 @@ const routes: Routes = [
     DropdownModule,
     InputTextModule,
     ReactiveFormsModule,
-    InputNumberModule
+    InputNumberModule,
+    MultiSelectModule
   ],
   exports: [],
 })

@@ -17,9 +17,10 @@ export class CustomerService {
   }
   createCustomer(customer: Customer) {
     let response = this.http.post<Customer>(this.API, customer).subscribe(
-      (dados) => console.log(dados),
-      (error: any) => alert('Erro! Verifique o cep digitado!')
-    );
+      (customer) => console.log(customer),
+      (error: any) => alert('Erro ao inserir o cliente!')
+    )
+    console.log(customer.phone)
     return response;
   }
 
@@ -32,6 +33,6 @@ export class CustomerService {
     return this.http
       .get<Address>(
         'https://viacep.com.br/ws/' + cep.replace('-', '') + '/json/'
-      )
+      ).pipe()
   }
 }

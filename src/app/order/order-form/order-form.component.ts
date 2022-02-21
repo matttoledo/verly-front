@@ -1,26 +1,34 @@
+import { ProductService } from './../../product/product.service';
 import { CustomerService } from './../../customer/customer.service';
 import { OrderService } from './../order.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Customer } from 'src/app/customer/customer';
 import { Observable } from 'rxjs';
+import { Product } from 'src/app/product/product';
 @Component({
   selector: 'order-form',
   templateUrl: './order-form.component.html',
   styleUrls: ['./order-form.component.css'],
 })
 export class OrderFormComponent implements OnInit {
-  form!: FormGroup;
 
-  customers$!: Observable<Customer[]>;
+  form!: FormGroup
 
-  selectedCustomer!: Customer;
+  customers$!: Observable<Customer[]>
 
-  orderStatus!: any;
+  products$!: Observable<Product[]>
 
-  selectedStatus!: string;
+  selectedProducts!: Product[]
+
+  selectedCustomer!: Customer
+
+  orderStatus!: any
+
+  selectedStatus!: string
 
   constructor(
+    private productService: ProductService,
     private orderService: OrderService,
     private formBuilder: FormBuilder,
     private customerService: CustomerService
@@ -36,6 +44,7 @@ export class OrderFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.customers$ = this.customerService.getCustomers();
+    this.products$ = this.productService.getProducts();
 
     this.form = this.formBuilder.group({
       customerId: [null],

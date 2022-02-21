@@ -46,7 +46,7 @@
                 />
               </ng-template>
               <ng-template pTemplate="output">
-                {{ customer.address.logradouro }}
+                {{ customer.address.localidade }}
               </ng-template>
             </p-cellEditor>
           </td>
@@ -85,7 +85,7 @@
                   mask="(99) 99999-9999"
                   pInputText
                   type="text"
-                  [(ngModel)]="customer.phones.one"
+                  [(ngModel)]="customer.phone.one"
               ></p-inputMask>
               </ng-template>
               <ng-template pTemplate="output">
@@ -100,7 +100,7 @@
                   mask="(99) 99999-9999"
                   pInputText
                   type="text"
-                  [(ngModel)]="customer.phones.two"
+                  [(ngModel)]="customer.phone.two"
                 ></p-inputMask>
               </ng-template>
               <ng-template pTemplate="output">

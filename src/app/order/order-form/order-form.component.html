@@ -9,16 +9,7 @@
       >
         <div class="inline-block">
           <p
-            class="
-              text-1xl
-              px-2
-              py-2
-              mb-4
-              shadow-2
-              flex
-              align-items-center
-              justify-content-center
-            "
+            class="text-1xl px-2 py-2 mb-4 shadow-2 flex align-items-center justify-content-center"
           >
             Novo Pedido
           </p>
@@ -30,17 +21,15 @@
               optionLabel="name"
               [filter]="true"
               filterBy="name"
-              [showClear]=true
+              [showClear]="true"
               placeholder="Selecione um Cliente"
+              [(ngModel)]="selectedCustomer"
             >
-              <p-dropdown
-                ([options])="(customers)"
-                optionLabel="name"
-              ></p-dropdown>
-
               <ng-template pTemplate="selectedItem">
-                <div *ngIf="selectedCustomer">
-                  <h3>{{selectedCustomer.name}}</h3>
+                <div
+                  class="customer-item customer-item-value"
+                  *ngIf="selectedCustomer"
+                >
                   <div>{{ selectedCustomer.name }}</div>
                 </div>
               </ng-template>
@@ -51,9 +40,15 @@
               </ng-template>
             </p-dropdown>
           </div>
+
           <div class="p-float-label my-4">
-            <input type="text" pInputText autocomplete="disabled" />
             <label for="float input">Produtos</label>
+            <p-multiSelect
+              *ngIf="products$ | async as products"
+              [options]="products"
+              [(ngModel)]="selectedCustomer"
+              optionLabel="category"
+            ></p-multiSelect>
           </div>
 
           <div class="p-float-label my-4">
@@ -61,7 +56,7 @@
               formControlName="status"
               [options]="orderStatus"
               optionLabel="name"
-              [showClear]=true
+              [showClear]="true"
               placeholder="Status"
             ></p-dropdown>
           </div>
